@@ -7,7 +7,7 @@ import firebaseAppConfig from "./firebaseauth";
 firebase.initializeApp(firebaseAppConfig);
 import router from "./router";
 import { AuthGuard } from "vue-firebase-auth-plugins";
-Vue.use(AuthGuard, { auth: firebase.auth(), router: router });
+Vue.use(AuthGuard, { auth: firebase.auth(), router: router, postAuthPath:"/" });
 
 Vue.config.productionTip = false;
 
