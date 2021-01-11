@@ -26,7 +26,7 @@ export default {
 	};
 	this.ui.start('#firebaseui-auth-container', uiConfig);
     },
-    unmounted() {
+    beforeDestroy() {
 	console.log("Moving from login");
 	if ( this.ui !== null ) {
 	    this.ui.delete();
